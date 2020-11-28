@@ -1,0 +1,16 @@
+syntax = 'proto3';
+message Features{
+    int32 jobType     = 1 ;
+    int32 degree        = 2 ;
+    float yearsExperience      = 3 ;
+
+}
+//Define a message to hold the predicted price :
+message Prediction{
+    int salary      = 1 ;
+}
+
+//Define the service :
+service Predict{
+    rpc predict_sale_price(Features) returns (Prediction){}
+}
